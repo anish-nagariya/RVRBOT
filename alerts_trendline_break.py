@@ -192,7 +192,7 @@ if __name__ == "__main__":
     channel = 1001900681621426186
     server = 733151193471123518
     # initializing bot
-    bot = lightbulb.BotApp(token='OTk2ODcxNjIxOTE2Nzc0NDMw.G6Y2XO.TAj3SzyLDbFEYk3_gUXEM9y1cPwLxSmoOXa9d0',
+    bot = lightbulb.BotApp(token='',
                            default_enabled_guilds=server)
 
     # starting bot
