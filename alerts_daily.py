@@ -70,10 +70,10 @@ if __name__ == '__main__':
     # storing average daily volume
     for r in resp: avg_vol[r[0]] = r[1]
     # channel id
-    channel = 994586736078377022
-    server = 994567402916413491
-    # server = 733151193471123518
-    # channel = 1004163288231329802
+    # channel = 994586736078377022
+    # server = 994567402916413491
+    server = 733151193471123518
+    channel = 1004163288231329802
     # initializing bot
     bot = lightbulb.BotApp(token='OTk2ODU0MDg1MDMyNjExOTUx.GYD0xP.k94DJj9osUEtDjlFV57bYdV5xX02Dm0Db_WIKk',
                            default_enabled_guilds=server)
