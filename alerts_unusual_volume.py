@@ -85,7 +85,7 @@ if __name__ == "__main__":
     server = 733151193471123518
 
     # initializing discord bot
-    bot = lightbulb.BotApp(token='OTk2ODc5NzI0NjcwMzY5ODAz.GuXiVp.UDLFxHPPc7YWEif-PbFuFc4FngntbWz_3TWXWA',
+    bot = lightbulb.BotApp(token='',
                            default_enabled_guilds=server)
 
     # starting bot
