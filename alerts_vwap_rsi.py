@@ -83,7 +83,7 @@ def detect_vwap_rsi(t):
 if __name__ == "__main__":
     p = Pool(16)
 
-    bot = lightbulb.BotApp(token='OTk2OTEzMjQxODE5MTkzMzg2.GhfnRs.n4ZEN0I-THhsdCVCRgZn1xXRRGOOq0LEFpaHRA',
+    bot = lightbulb.BotApp(token='',
                            default_enabled_guilds=(994567402916413491, 733151193471123518))
 
 
