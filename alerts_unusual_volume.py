@@ -103,7 +103,7 @@ if __name__ == "__main__":
     @sched.scheduled_job(CronTrigger(minute="*/5"))
     async def unusual_volume():
         # checking if timings are met for regular hours
-        if 15 <= datetime.now().hour < 21 or datetime.now().hour == 14 and datetime.now().minute >= 30:
+        if 15 <= datetime.now().hour < 21 or datetime.now().hour == 14 and datetime.now().minute >= 50:
             start = time.time()
             embeds_ = []
             # multiprocessing the function detect_vol for all tickers
