@@ -112,7 +112,7 @@ if __name__ == '__main__':
     sched.start()
 
     # scheduling job for daily alert
-    @sched.scheduled_job(CronTrigger(hour="13", minute="30"))
+    @sched.scheduled_job(CronTrigger(hour="18", minute="30"))
     async def alert_daily():
         # mentioning time for the alert
         await bot.rest.create_message(channel, "**Daily Alerts 1:30 PM**")
@@ -132,7 +132,7 @@ if __name__ == '__main__':
         print(f'Time Taken For Daily: {time.time() - start}')
 
     # scheduling job for daily alert at 10:00
-    @sched.scheduled_job(CronTrigger(hour="10", minute="00"))
+    @sched.scheduled_job(CronTrigger(hour="15", minute="00"))
     async def alert_daily():
         # mentioning the time for the alert
         await bot.rest.create_message(channel, "**Daily Alerts 10:00 AM**")
