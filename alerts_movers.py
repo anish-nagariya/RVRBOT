@@ -13,7 +13,7 @@ wb = webull()
 # function to get the biggest gainers for today
 def todays_gainers():
     # getting request from polygon api link for top 20 gainers
-    if datetime.datetime.now().hour < 9:
+    if datetime.datetime.now().hour < 14:
         wb.login('anishnagariya07@gmail.com', 'Anish#123')
         resp = wb.active_gainer_loser(direction='gainer', rank_type='preMarket', count=10)['data']
         ans = ["**Todays Biggest Gainers**\n"]
@@ -85,7 +85,7 @@ if __name__ == '__main__':
         print(f'Time Taken For Daily: {time.time() - start}')
 
     # function to get the biggest gainers for pre-market hours at 7:30
-    @sched.scheduled_job(CronTrigger(hour="7", minute="30", jitter=60))
+    @sched.scheduled_job(CronTrigger(hour="12", minute="30", jitter=60))
     async def gainers():
         # getting the biggest gainers of today
         embeds = todays_gainers()
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         time.sleep(30)
 
     # function to get the biggest gainers for regular hours at 10:00
-    @sched.scheduled_job(CronTrigger(hour="10", minute="30", jitter=10))
+    @sched.scheduled_job(CronTrigger(hour="15", minute="00", jitter=10))
     async def gainers():
         # getting the biggest gainers of today
         embeds = todays_gainers()
@@ -113,7 +113,7 @@ if __name__ == '__main__':
         time.sleep(30)
 
     # function to get the biggest losers for regular hours at 3:30
-    @sched.scheduled_job(CronTrigger(hour="15", minute="30", jitter=10))
+    @sched.scheduled_job(CronTrigger(hour="20", minute="30", jitter=10))
     async def losers():
         # getting the biggest losers of today
         embeds = todays_losers()
